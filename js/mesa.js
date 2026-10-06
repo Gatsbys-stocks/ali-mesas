@@ -1,11 +1,11 @@
-/* Lógica de la tablet de mesa · Ali Doner Kebab (no hace falta tocar nada aquí) */
+/* Lógica de la tablet de mesa · Food Truck (no hace falta tocar nada aquí) */
 /* ===================== ESTADO ===================== */
 const store = {
   get(k, d){ try{ const v = localStorage.getItem(k); return v === null ? d : v; }catch(e){ return d; } },
   set(k, v){ try{ localStorage.setItem(k, v); }catch(e){} }
 };
 let lang = 0;                                   // índice en LANGS
-let table = parseInt(store.get("ali_mesa_table", "1"), 10) || 1;
+let table = parseInt(store.get("ft_mesa_table", "1"), 10) || 1;
 let cart = [];                                  // { key, id, opt, qty, note }
 let ordered = {};                               // lo que ya hay en la comanda de esta mesa
 let db = null, online = false, demo = false;
@@ -320,7 +320,7 @@ function openAdmin(){
       if(pin.length === 4){ if(pin === ADMIN_PIN) return drawTables(); pin = ""; toast("PIN ✕"); }
       drawPin();
     } else if(b.dataset.tb){
-      table = +b.dataset.tb; store.set("ali_mesa_table", String(table));
+      table = +b.dataset.tb; store.set("ft_mesa_table", String(table));
       document.getElementById("table-num").textContent = table; ordered = {}; listenTable(); renderTicket(); drawTables();
     } else if(b.hasAttribute("data-fs")){
       const d = document.documentElement; (d.requestFullscreen ? d.requestFullscreen() : Promise.reject()).catch(() => {});

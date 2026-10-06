@@ -1,6 +1,6 @@
 {
-  "name": "Ali Doner Kebab · Mesa",
-  "short_name": "Ali Mesa",
+  "name": "Food Truck · Mesa",
+  "short_name": "FT Mesa",
   "description": "Pide desde la mesa",
   "start_url": "./index.html",
   "scope": "./",

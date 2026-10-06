@@ -1,5 +1,5 @@
 /* =====================================================================
-   CONFIGURACIÓN DE LA TABLET DE MESA · Ali Doner Kebab
+   CONFIGURACIÓN DE LA TABLET DE MESA · Food Truck
    Firebase tiene que ser EL MISMO que en la app de Cocina y Caja (pedidos/cocina-caja/js/config.js).
    Los platos, precios e idiomas están en js/menu-data.js
    ===================================================================== */
@@ -12,7 +12,7 @@ const FIREBASE_CONFIG = {
   messagingSenderId: "490070778149",
   appId: "1:490070778149:web:6fc91223d6fe9f04697acc"
 };
-const DB_ROOT = "alidoner/";          // igual que la app de Cocina y Caja
+const DB_ROOT = "foodtruck/";          // igual que la app de Cocina y Caja
 const SESSION = "sala";               // igual que la app de Cocina y Caja
 const ADMIN_PIN = "1234";             // para cambiar el número de mesa (toca 5 veces el número de mesa)
 const NUM_TABLES = 10;
